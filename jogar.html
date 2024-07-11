@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.9.14">
+<meta charset="utf-8">
+<title>PARDAL</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#778899">
+<link rel="manifest" href="pardal.webmanifest">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="msapplication-tap-highlight" content="no">
+<link type="text/css" rel="stylesheet" href="./css/index.css">
+<script type="importmap">
+{
+        "imports": {
+                "three": "./lib/three.module.min.js",
+                "cannon": "./lib/cannon-es.min.js"
+        }
+}
+</script>
+<script src="./lib/lz-string.min.js"></script>
+<script type="module" src="./src/index.js"></script>
+</head>
+<body>
+<div id='MenuIcon'>☰</div>
+<section id='Menu' class='hidden'>
+<p data-page='HomePage'><img src='images/icon-home.svg'></p>
+<p data-page='QuizzInfo'><img src='images/icon-info.svg'></p>
+<p data-page='QuizzConfig'><img src='images/icon-options.svg'></p>
+</section>
+<section id='pages_wrapper' class='hidden'>
+<section id='pages_container'>
+<section id='HomePage' class='page'>
+<header>
+<h1>:: Pardal ::</h1>
+</header>
+<button id='play'>Jogar</button>
+<header id='home_title'></header>
+</section>
+<section id='QuizzInfo' class='page info_page'>
+<div id='quizz_info' class='info_pannel'>
+<p id='quizz_title'></p>
+<p>ID<span id='quizz_key'></span></p>
+<p>Autoria<span id='quizz_author'></span></p>
+<p>Data<span id='quizz_date'></span></p>
+<p>Perguntas<span id='quizz_length'></span></p>
+</div>
+<div id='quizz_info_extra' class='info_pannel'>
+<p>PARDAL</p>
+<p class='highlight'>Uma viagem na busca de grãos de conhecimento</p>
+<p>Ideia e programação<span>Pedro Fontoura – 2024</span></p>
+<div class='note'>
+<p>Este programa é fornecido <i>como está</i>,<br>
+sem garantia de qualquer tipo, expressa ou implícita.</p>
+<p>Cookies: Não é usado nenhum.</p>
+<p>Recolha de informação: Não são coletados quaisquer dados.</p>
+<p>Versão: 2024-0305-2322</p>
+</div>
+</div>
+</section>
+<section id='QuizzConfig' class='page info_page'>
+<div class='info_pannel'>
+<p>Configuração</p>
+<div><button id='btn_full_screen'>Ecrã completo</button></div>
+<div id="tts_select">
+<p class='highlight'>Síntese de voz</p>
+<p><label for="tts_select_rate">Ritmo<span id="txt_rate">1</span></label> <input type="range" min="0.5" max="1.5" value="1" step="0.05" id="tts_select_rate"></p>
+<select id="tts_select_voices"></select>
+<p>support.microsoft.com » <a href='https://support.microsoft.com/pt-pt/windows/ap%C3%AAndice-a-idiomas-e-vozes-suportados-4486e345-7730-53da-fcfe-55cc64300f01#WindowsVersion=Windows_10' target='_blank'>Apêndice A: Idiomas e vozes suportados</a></p>
+</div>
+</div>
+</section>
+<section id='GamePage' class='page'>
+<canvas id="c"></canvas>
+<p id="info">FPS: <span id="fps">FPS</span></p>
+<div id="radar_section" class="hidden">
+<div id="radar_dtt">
+<p id="dtt_percent"></p>
+</div>
+</div>
+<p id="dst" class="counter IGI"></p>
+<p id="dtt" class="counter IGI special"></p>
+<p id="score_quizz" class="counter IGI"></p>
+<p id="score_quizz_percent" class="counter IGI special"></p>
+<p id="score_question" class="counter IGI special no_show"></p>
+<p id="lives" class="IGI"></p>
+<section id="quizz_path" class="!IGI">
+<div id='quizz_path_percent'></div>
+</section>
+<section id="quizz_result" class="">
+<header id="qr_title">Resultado</header>
+<p>Desempenho<span id="qr_performance"></span></p>
+<p>Respostas certeiras<span id="qr_headshots"></span></p>
+<p>Distância percorrida<span id="qr_distance"></span></p>
+</section>
+</section>
+</section>
+</section>
+</body>
+</html>

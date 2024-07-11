@@ -1,0 +1,31 @@
+body {
+    font-family: verdana;
+    font-size: 10pt;
+}
+h1 {
+    color: #1a5bb4;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    text-align: left;
+    background-color: gainsboro;
+    padding: 1vmin;
+    background-color: #1a5bb4;
+    color: white;
+}
+tr {
+    border-bottom: 1px solid #666;
+}
+tr:not( :nth-of-type( 1 ) ) {
+    cursor: pointer;
+}
+tr:not( :nth-of-type( 1 ) ):hover {
+    background-color: #D5D8DC;
+}
+td {
+    padding: 1vmin;
+    padding-left: 1vmin;
+}
